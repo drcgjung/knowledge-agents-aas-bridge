@@ -1,7 +1,7 @@
 <!--
+ * Copyright (c) 2023,2024 T-Systems International GmbH 
  * Copyright (c) 2023 SAP SE 
- * Copyright (c) 2023 T-Systems International GmbH 
- * Copyright (c) 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2023,2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -25,9 +25,19 @@ All notable changes to this product will be documented in this file.
 
 # Released
 
+## [1.13.7] - 2024-07-15
+
+### Added
+
+### Changed
+
+- KA-AAS: Upgrade to FAAAST 1.0.1 and AAS 3.0, Switch from Json-Based to XSLT-Based Stylesheets.
+
+### Removed
+
 # Unreleased
 
-## [0.10.5] - 
+## [0.10.5] - 2023-12
 
 ### Added
 

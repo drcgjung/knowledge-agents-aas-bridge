@@ -1,6 +1,6 @@
----
+#!/bin/sh
+
 # Copyright (c) 2022,2024 Contributors to the Eclipse Foundation
-#
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
 #
@@ -15,12 +15,9 @@
 # under the License.
 #
 # SPDX-License-Identifier: Apache-2.0
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ include "agent.fullname" . }}-env
-  namespace: {{ .Release.Namespace | default "default" | quote }}
-  labels:
-    {{- include "agent.labels" . | nindent 4 }}
-data:
-  {{- toYaml .Values.env | nindent 2 }}
+
+OLD_VERSION=1.14.24-SNAPSHOT
+echo Upgrading from $OLD_VERSION to $1
+PATTERN=s/$OLD_VERSION/$1/g
+LC_ALL=C
+find ./ -type f \( -iname "*.xml" -o -iname "*.sh"  -o -iname "*.yml"  -o -iname "*.yaml"  -o -iname "*.md"  -o -iname "*.java" -o -iname "*.properties" \) -exec sed -i.bak $PATTERN {} \;

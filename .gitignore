@@ -1,4 +1,4 @@
-# Copyright (c) 2022,2023 Contributors to the Eclipse Foundation
+# Copyright (c) 2022,2024 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -32,3 +32,10 @@ logs/
 .vscode
 .env
 __pycache__
+.classpath
+.project
+.settings/
+*cs-cleanup.xml
+*cs-formatter.xml
+.checkstyle
+
